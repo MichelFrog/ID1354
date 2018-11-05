@@ -73,7 +73,6 @@ img {
     width:25vw;
     padding: 0;
     text-align: left; 
-    list-style: outside;
 }
 
 .directions{
@@ -81,7 +80,6 @@ img {
     width:25vw;
     padding: 0;
     text-align: left; 
-    list-style: outside;
 }
 
 .comments {
@@ -89,9 +87,8 @@ img {
     width:25vw;
     padding: 0;
     text-align: left; 
-    list-style: outside;
 }
-.meatball {
+.image {
     grid-area: img;
     display: block;
     margin-left: auto;
@@ -153,7 +150,7 @@ img {
         text-align: left; 
         list-style: outside;
     }
-    .meatball {
+    .image {
         grid-area: img;
         display: block;
         margin-left: auto;
@@ -163,155 +160,72 @@ img {
 }
 @media screen and (max-width: 800px){
     .main-nav ul {
-        display: grid;
-        grid-gap: 2vw;
-        padding: 0;
-        list-style: none;
         grid-template-columns: repeat(2,1fr);
     }
-    .main-nav a {
-        background: var(--primary);
-        display: block;
-        text-decoration:  none;
-        padding: 0.8rem;
-        text-align: center;
-        color: var(--red);
-        text-transform: uppercase;
-        font-size: 1rem;
-        box-shadow: var(--shadow);
-    }
+
     .ingredients {
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
     }
     
     .directions{
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
     }
     
     .comments {
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
     }
-    .meatball {
-        grid-area: img;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    .image {
         width: 50%;
     }
 
 }
 @media screen and (max-width: 600px){
     .main-nav ul {
-        display: grid;
         grid-gap: 2vw;
-        padding: 0;
-        list-style: none;
         grid-template-columns: repeat(2,1fr);
     }
-    .main-nav a {
-        background: var(--primary);
-        display: block;
-        text-decoration:  none;
-        padding: 0.8rem;
-        text-align: center;
-        color: var(--red);
-        text-transform: uppercase;
-        font-size: 1rem;
-        box-shadow: var(--shadow);
-    }
+
     .ingredients {
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
     }
     
     .directions{
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
+
     }
     
     .comments {
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
     }
-    .meatball {
-        grid-area: img;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    .image {
+
         width: 50%;
     }
 
 }
 @media screen and (max-width: 320px){
     .main-nav ul {
-        display: grid;
-        grid-gap: 2vw;
-        padding: 0;
-        list-style: none;
         grid-template-columns: repeat(1,1fr);
     }
-    .main-nav a {
-        background: var(--primary);
-        display: block;
-        text-decoration:  none;
-        padding: 0.8rem;
-        text-align: center;
-        color: var(--red);
-        text-transform: uppercase;
-        font-size: 1rem;
-        box-shadow: var(--shadow);
-    }
+
     .ingredients {
-        margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left;
         font-size: 5vw;  
-        list-style: outside;
     }
     
     .directions{
         margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
         font-size: 5vw; 
-        list-style: outside;
+  
     }
     
     .comments {
         margin: 0 auto;
         width:80vw;
-        padding: 0;
-        text-align: left; 
-        list-style: outside;
+
     }
-    .meatball {
-        grid-area: img;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    .image {
         width:100%;
     }
 
