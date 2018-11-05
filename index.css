@@ -1,0 +1,197 @@
+:root{
+    --primary: #dddd;
+    --red: rgb(89, 17, 17);
+    --black: rgb(17, 3, 3);
+    --shadow: 0 1px 5px rgb(203, 188, 188);
+}
+
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--red);
+}
+
+body{
+    background: var(--primary);
+    margin: 3vw;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover
+}
+
+.wrapper  {
+    display: grid;
+    grid-gap: 1vw;
+}
+
+.main-nav ul {
+    display: grid;
+    grid-gap: 2vw;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.main-nav a {
+    background: var(--primary);
+    display: grid;
+    text-decoration:  none;
+    padding: 1vw;
+    text-align: center;
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+}
+.main-nav a:hover {
+    background: var(--black); 
+    color: var(--primary);
+}
+
+.top-container-text {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-areas:
+    'welcome welcome welcome welcome'
+    'info info info-2 info-2'
+    'info info info-2 info-2'
+    'info info callink callink'
+}
+.top-container-text a{
+    text-decoration: none;
+}
+.top-container-text h1 {
+    grid-area: welcome;
+    font-size: 1rem;
+    padding: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+.p1 {
+    grid-area: info;
+    font-size: 1rem;
+}
+.p2 {
+    grid-area: info-2;
+    font-size: 1rem;
+}
+
+.cal-link {
+    grid-area: callink;
+    font-size: 1rem;
+}
+
+#calendar-click {
+    position: absolute;
+    background: rgba(184, 80, 80, 0.867);
+    bottom:30px;
+    left:0px;
+    color: var(--primary);
+    text-align: top;
+    visibility:hidden;
+    }
+
+.top-container-text:hover #calendar-click {
+visibility:visible;
+}
+
+@media screen and (min-width: 800px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+}
+@media screen and (max-width: 800px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .top-container-text {
+        display: grid;
+        grid-gap: 1vw;
+        grid-template-areas:
+        'welcome welcome welcome welcome'
+        'info info  info info-2'
+        'info info info info-2'
+        'info info callink callink'
+
+    }
+
+}
+@media screen and (max-width: 320px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .top-container-text {
+        display: grid;
+        grid-gap: 1vw;
+        grid-template-areas:
+        'welcome welcome welcome welcome'
+        'info info  info info'
+        'info-2 info-2 info-2 info-2'
+        'callink callink callink callink'
+
+    }
+    .top-container-text h1 {
+        grid-area: welcome;
+        font-size: 10vw;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .p1 {
+        grid-area: info;
+        padding: 10px;
+        font-size: 10vw;
+    }
+    .p2 {
+        grid-area: info-2;
+        padding: 10px;
+        font-size: 10vw;
+    }
+    }

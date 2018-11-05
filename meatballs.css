@@ -1,0 +1,318 @@
+:root{
+    --primary: #dddd;
+    --whiteAsPicture: rgba(255, 255, 255, 0.867);
+    --red: rgb(89, 17, 17);
+    --black: rgb(17, 3, 3);
+    --shadow: 0 1px 5px rgb(203, 188, 188);
+}
+
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--red);
+}
+
+body{
+    background: var(--whiteAsPicture);
+    margin: 3vw;
+    line-height: 1.4;
+    text-align:center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+
+}
+
+.wrapper  {
+    display: grid;
+    grid-gap: 1vw;
+}
+
+.main-nav ul {
+    display: grid;
+    grid-gap: 2vw;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.main-nav a {
+    background: var(--primary);
+    display: grid;
+    text-decoration:  none;
+    padding: 1vw;
+    text-align: center;
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+}
+.main-nav a:hover {
+    background: var(--black); 
+    color: var(--primary);
+}
+.top-container-text {
+    display: grid;
+    grid-gap: 20px;
+    
+}
+.top-container-text h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.top-container-text h2 {
+    font-weight: bolder;    
+}
+.ingredients {
+    margin: 0 auto;
+    width:25vw;
+    padding: 0;
+    text-align: left; 
+    list-style: outside;
+}
+
+.directions{
+    margin: 0 auto;
+    width:25vw;
+    padding: 0;
+    text-align: left; 
+    list-style: outside;
+}
+
+.comments {
+    margin: 0 auto;
+    width:25vw;
+    padding: 0;
+    text-align: left; 
+    list-style: outside;
+}
+.meatball {
+    grid-area: img;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media screen and (min-width: 800px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .top-container-text {
+        display: grid;
+        grid-gap: 20px;   
+    }
+    .top-container-text h1 {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: bold;      
+    }
+    .top-container-text h2 {
+        font-weight: bolder;    
+    }
+    .ingredients {
+        margin: 0 auto;
+        width:25vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    
+    .directions{
+        margin: 0 auto;
+        width:25vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    
+    .comments {
+        margin: 0 auto;
+        width:25vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    .meatball {
+        grid-area: img;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 800px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .ingredients {
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    
+    .directions{
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    
+    .comments {
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    .meatball {
+        grid-area: img;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+}
+@media screen and (max-width: 600px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .ingredients {
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    
+    .directions{
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    
+    .comments {
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    .meatball {
+        grid-area: img;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+}
+@media screen and (max-width: 320px){
+    .main-nav ul {
+        display: grid;
+        grid-gap: 2vw;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration:  none;
+        padding: 0.8rem;
+        text-align: center;
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .ingredients {
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left;
+        font-size: 5vw;  
+        list-style: outside;
+    }
+    
+    .directions{
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        font-size: 5vw; 
+        list-style: outside;
+    }
+    
+    .comments {
+        margin: 0 auto;
+        width:80vw;
+        padding: 0;
+        text-align: left; 
+        list-style: outside;
+    }
+    .meatball {
+        grid-area: img;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:100%;
+    }
+
+    }
