@@ -39,6 +39,9 @@ img {
     text-align: center;
     font-weight: bold;    
 }
+.ingredients::first-line {
+    text-transform: uppercase;
+}
 
 .ingredients {
     margin: 0 auto;
@@ -49,7 +52,14 @@ img {
     text-align: left;
     font-weight: 600; 
 }
+.ing::before {
+    content: "•";
+    padding-right: 4px;
+}
 
+.directions::first-line{
+    text-transform: uppercase;
+}
 .directions{
     margin: 0 auto;
     box-shadow: var(--shadow);
@@ -60,7 +70,7 @@ img {
     font-weight: 600; 
 }
 
-.directions li::before {
+.dir::before {
     content: "•";
     padding-right: 4px;
 }

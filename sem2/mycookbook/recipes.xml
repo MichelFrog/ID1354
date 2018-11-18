@@ -63,10 +63,9 @@
     <imagepath>pancakeForRecipe.jpg</imagepath>
     <comments></comments>
     <source>Brains</source>
-    <video>http://www.youtube.com/embed/FGME3FVga-g?feature=oembed</video>
     <nutrition></nutrition>
     <rating>4</rating>
-    <category>Dessert</category>
+    <category>Breakfast</category>
     </recipe>
 
 </cookbook>

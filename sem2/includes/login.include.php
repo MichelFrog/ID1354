@@ -7,7 +7,7 @@ if(isset($_POST['login-submit'])){
     $password = $_POST['pwd'];
    
     if (empty($mail) || empty($password)) {
-        header("Location: ../index.php?error=poop");
+        header("Location: ../index.php?error=emptyField");
         exit();
     }
     else {
