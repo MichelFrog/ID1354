@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cookbook version="46">
+
+    <recipe>
+    <title>Meatballs</title>
+    <preptime>10 min</preptime>
+    <cooktime>15 min</cooktime>
+    <totaltime>25 min</totaltime>
+    <description>
+        <li>Desc 1</li>
+        <li>Desc 2</li>
+    </description>
+    <ingredient>
+            <li> 1/2 cups all-purpose flour</li>
+            <li> 3 1/2 teaspoons baking powder</li>
+            <li> 1 teaspoon salt</li>
+            <li> 1 tablespoon white sugar</li>
+            <li> 1 1/4 cups milk</li>
+            <li> 1 egg</li>
+            <li> 3 tablespoons butter, melted</li>
+    </ingredient>
+    <directions>
+            <li> Pre-heat oven to 220 degrees</li>
+            <li> Mix all ingredients in a large bowl</li>
+            <li> Form the mix into small balls and place on bakingsheet</li>
+            <li> Bake uncovered for 15-22 minutes</li>
+            <li> Enjoy</li>
+    </directions>
+    <quantity>8</quantity>
+    <imagepath>meatballForRecipe.jpg</imagepath>
+    <comments>Your comments</comments>
+    <nutrition>
+        <li>A lot of protien</li>
+    </nutrition>
+    <rating>5</rating>
+    <category>Dinner</category>
+    </recipe>
+    
+    <recipe>
+    <title>Pancakes</title>
+    <preptime>10 min</preptime>
+    <cooktime>3 min</cooktime>
+    <totaltime>13 min</totaltime>
+    <ingredient>
+            <li> 1/2 cups all-purpose flour</li>
+            <li> 3 1/2 teaspoons baking powder</li>
+            <li> 1 teaspoon salt</li>
+            <li> 1 tablespoon white sugar</li>
+            <li> 1 1/4 cups milk</li>
+            <li> 1 egg</li>
+            <li> 3 tablespoons butter, melted</li>
+    </ingredient>
+    <directions>
+        <li>In a large bowl, sift together the flour, baking powder, salt and sugar.</li>
+        <li>Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.</li>
+        <li>Heat a lightly oiled griddle or frying pan over medium high heat.  </li>
+        <li>Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake.</li>
+        <li>Brown on both sides and serve hot. </li>
+        <li>Enjoy</li>
+    </directions>
+    <url></url>
+    <quantity>5</quantity>
+    <imagepath>pancakeForRecipe.jpg</imagepath>
+    <comments></comments>
+    <source>Brains</source>
+    <video>http://www.youtube.com/embed/FGME3FVga-g?feature=oembed</video>
+    <nutrition></nutrition>
+    <rating>4</rating>
+    <category>Dessert</category>
+    </recipe>
+
+</cookbook>

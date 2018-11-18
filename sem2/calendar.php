@@ -1,26 +1,21 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/> 
     <title>Delicious pancakes! - Tasty recipe</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="calendar.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="navigationbar">
-            <!--Navigation bar-->
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="recipeMeatballs.html">Meatball Recipe</a></li>
-                    <li><a href="recipePancakes.html">Pancake Recipe</a></li>
-                </ul>
-            </nav>
-
+         <?php require('includes/header.php'); ?>
             <section class="top-container-text">
                 <h1>Plan your meals with our meal calender!</h1>
+                <h2>November</h2>
 
             </section>   
         </div>
@@ -38,7 +33,7 @@
             <div id="grid-day">
                 <a class="day" id="day1">1</a>
                 <a class="day" id="day2">2</a>
-                <a class="day" href="recipeMeatballs.html" id="day3">3
+                <a class="day" href="recipeMeatballs.php" id="day3">3
                     <img src="meatballs.png" alt="Meatballs!" />
                     <p id="meatball-click">Click to visit our meatball recipe!</p>
                 </a>
@@ -50,7 +45,7 @@
                 <a class="day" id="day9">9</a>
                 <a class="day" id="day10">10</a>
                 <a class="day" id="day11">11</a>
-                <a class="day" id="day12" href="recipePancakes.html">12
+                <a class="day" id="day12" href="recipePancakes.php">12
                     <img src="pancake.png" alt="Pancakes!" />
                     <p id="pancake-click">Click to visit our pancake recipe!</p>
                 </a>
@@ -74,6 +69,5 @@
                 <a class="day" id="day30">30</a>
             </div>
         </div>
-    </div>
 </body>
-</html>
+</html>       

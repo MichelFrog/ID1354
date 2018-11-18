@@ -86,12 +86,21 @@ img {
     grid-gap: 1vw;
     grid-template-areas:
     'welcome welcome welcome welcome'
+    'month month month month'
 }
 .top-container-text h1 {
     grid-area: welcome;
     font-size: 2vw;
     font-weight: bolder;
     padding: 2vw;
+    text-align: center;
+}
+
+.top-container-text h2 {
+    grid-area: month;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 1vw;
     text-align: center;
 }
 
@@ -109,7 +118,7 @@ img {
     background: var(--primary);
     display: block;
     text-decoration:  none;
-    padding: 0.8vw;
+    padding: 1vw;
     text-align: center;
     color: var(--red);
     font-size: 1rem;
@@ -118,6 +127,11 @@ img {
 #grid-day {
     grid-auto-rows: 20vw;
     align-self: auto;
+}
+#grid-day a:hover {
+    background: var(--black); 
+    font-size: 2vw;
+    color: var(--primary);
 }
 #grid-weekdays {
     text-decoration: none;
@@ -128,7 +142,7 @@ img {
     }
 
     .calendar-grid div {
-        grid-gap: 0.1vw;
+        grid-gap: 0.5vw;
         grid-template-columns: repeat(7,1fr);
     }
     #grid-day {

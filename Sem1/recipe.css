@@ -157,6 +157,9 @@ img {
         margin-right: auto;
         width: 50%;
     }
+    .ingredients ul li {
+        list-style-type: circle;
+    }
 }
 @media screen and (max-width: 800px){
     .main-nav ul {
