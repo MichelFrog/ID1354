@@ -20,7 +20,7 @@ class Login extends AbstractRequestHandler{
         $ctrl = $this->session->get(Constants::CONTR_KEY);
         if(ctype_alnum($_POST['username']) AND ctype_print($_POST['password'])){
         $login = $ctrl->login($_POST['username'], $_POST['password']);
-        if(!is_string($login)) {
+        if(!is_numeric($login)) {
             $this->session->set(Constants::USERNAME_VAR, $login->getUsername());
             $this->addVariable(Constants::USERNAME_VAR, $login->getUsername());
             $this->session->set(Constants::USERID_VAR, $login->getUserID());
@@ -31,9 +31,25 @@ class Login extends AbstractRequestHandler{
             echo 'Successfully login!';
             return Constants::INDEX_VIEW;
         }
-        else{ 
-            echo "$login";
-            return Constants::INDEX_VIEW;     
+        elseif($signup == 2){
+            echo 'Please fill in all the fields.';
+        return Constants::INDEX_VIEW;
+        }
+        elseif($signup == 3){
+            echo 'Only characters and numbers for username';
+        return Constants::INDEX_VIEW;
+        }
+        elseif($signup == 4 || 6){
+            echo 'SQL ERROR';
+        return Constants::INDEX_VIEW;
+        }
+        elseif($signup == 5){
+            echo 'Incorrect password.';
+        return Constants::INDEX_VIEW;
+        }
+        elseif($signup == 6){
+            echo 'No such user.';
+        return Constants::INDEX_VIEW;
         }
     }
     echo 'Only characters or numbers allowed.';
@@ -42,3 +58,5 @@ class Login extends AbstractRequestHandler{
 }
     
 }
+
+

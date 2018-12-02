@@ -33,16 +33,42 @@ class SignupPage extends AbstractRequestHandler {
         $signup = $ctrl->signupUser($_POST['username'], $_POST['mailadress'], 
                                     $_POST['password'], $_POST['passwordconfirm']);
             
-        if(isset($_POST['signupsubmit'])){
-            if(is_string($signup)){
-                echo $signup;
-            return Constants::SIGNUP_VIEW;
-            }                     
-            elseif($signup == 1){
+        if(isset($_POST['signupsubmit'])){                 
+            if($signup == 1){
                 echo "Signup successful!";
             return Constants::INDEX_VIEW;
             }
+            elseif($signup == 2){
+                echo 'Empty fields';
+            return Constants::SIGNUP_VIEW;
+            }
+            elseif($signup == 3){
+                echo 'Incorrect format for either username or email.';
+            return Constants::SIGNUP_VIEW;
+            }            
+            elseif($signup == 4){
+                echo 'Incorrect format on email. Must be: xxxx@xxxxx.com';
+            return Constants::SIGNUP_VIEW;
+            }
+            elseif($signup == 5){
+                echo 'Incorrect format on username. Only characters or numbers';
+            return Constants::SIGNUP_VIEW;
+            }
+            elseif($signup == 6){
+                echo 'Passwords dont match.';
+            return Constants::SIGNUP_VIEW;
+            }
+            elseif($signup == 7){
+                echo  'Username taken. Please choose another one.';
+            return Constants::SIGNUP_VIEW;
+            }
+            elseif($signup == 8){
+                echo  "SQL ERROR!";
+            return Constants::SIGNUP_VIEW;
+            }
         }
+
+       
         return Constants::SIGNUP_VIEW;
 }}
     

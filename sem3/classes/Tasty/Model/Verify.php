@@ -10,38 +10,39 @@ class Verify {
 
     public function checkLoginInput($username, $password){
         if(empty($username) || empty($password)){
-            return 'Please fill in all the fields.'; 
+            return 2; 
         }elseif (!ctype_alnum($username)){
-            return 'Only characters and numbers for username';
+            return 3;
+        }else
+            return 10;
         }
-            return TRUE;
-        }
+        
     public function checkCommentInput($comment){
         if(empty($comment)){
-            return 'No blank fields'; 
+            return 1; 
         }
         elseif(!ctype_alnum($comment)){
-            return 'Only letters,numbers allowed. No blank fields';        }
-        return TRUE;
+            return 2;        }
+        return 10;
     }
 
     public function checkSignupInput($username, $email, $password, $passwordConfirm){ 
 
     if(empty($username) || empty($email) || empty($password) || empty($passwordConfirm)) 
-    { return 'Empty fields'; }
+    { return 2; }
     elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-        return 'Incorrect format for either username or email.';
+        return 3;
     }
     elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        return 'Incorrect format on email. Must be: xxxx@xxxxx.com';
+        return 4;
     }
     elseif (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-        return 'Incorrect format on username. Only characters or numbers';
+        return 5;
     }
     elseif ($password !== $passwordConfirm ){
-        return 'Passwords dont match.';
+        return 6;
     }
-    return TRUE;
+    return 10;
     }
 
 

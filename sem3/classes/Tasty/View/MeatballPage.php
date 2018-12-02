@@ -41,11 +41,20 @@ class MeatballPage extends AbstractRequestHandler {
     $ctrl = $this->session->get(Constants::CONTR_KEY);
     //Delete comment from database
     if (isset($_POST['commentdelete']) && isset($_POST['commentid'])){
-        echo $ctrl->deleteComment($_POST['commentid']);
+        $ctrl->deleteComment($_POST['commentid']);
+        echo 'Comment removed';
     }
     //Add new comment
     if (isset($_POST['submitcomment'])){
-        echo $ctrl->addComment($_POST['userid'], $_POST['date'], $_POST['comment']);
+        $comment = $ctrl->addComment($_POST['userid'], $_POST['date'], $_POST['comment']);
+        if($comment == 1){
+            echo 'No empty fields';
+        }
+        elseif($comment == 2){
+            echo 'Only number or letters in username';
+        }else
+        echo 'Sucessful comment';
+        $ctrl->addComment($_POST['userid'], $_POST['date'], $_POST['comment']);
     }
 
     //Get new comments and store an object for the next view.

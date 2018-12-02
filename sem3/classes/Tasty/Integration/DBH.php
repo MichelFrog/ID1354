@@ -30,7 +30,7 @@ public function login($username, $password){
         $sql = "SELECT * FROM users WHERE nameuser=? OR emailuser=?";
         $stmt = $conn->stmt_init();
         if (!$stmt->prepare($sql)) {
-            return '$sql';
+            return 4;
         }
         $stmt->prepare($sql);
         if($conn == true){
@@ -40,7 +40,7 @@ public function login($username, $password){
         if($row = $result->fetch_assoc ()){
             $pwdCheck = password_verify($password, $row['pwduser']);
             if ($pwdCheck == false) {
-                return 'Incorrect password.';
+                return 5;
             }
             elseif ($pwdCheck == true) {
                 $user;
@@ -49,10 +49,10 @@ public function login($username, $password){
             }
         }
         $conn->close();
-        return 'No such user.';
+        return 6;
     }
     $conn->close();
-    return 'SQL ERROR!';
+    return 7;
 }
 
 
@@ -66,17 +66,16 @@ public function newComment($userid, $date, $message){
         $stmt->execute();
         $conn->query($sql);
         $conn->close();
-        return 'Sucessful comment!';
+        return;
         }
 
-/* Password is hashed before */
 public function storeUser($username, $email, $password, $passwordConfirm)
 {
         $conn = $this->connection();
         $sql = "SELECT nameuser FROM users WHERE nameuser= ?";
         $stmt = $conn->stmt_init();
         if(!$stmt->prepare($sql)){
-            return "SQL ERROR!";
+            return 8;
         }
         else{ 
             $stmt->bind_param("s", $username);
@@ -84,7 +83,7 @@ public function storeUser($username, $email, $password, $passwordConfirm)
             $stmt->get_result();
             $result = $stmt->num_rows();
             if($result > 0) {
-                return 'Username taken. Please choose another one.';
+                return 7;
             }
             else {
     $sql = "INSERT INTO users(nameuser, emailuser, pwduser) VALUES (?, ?, ?)";
@@ -129,7 +128,6 @@ public function removeComment($commentid)
     $sql = "DELETE FROM comments WHERE commentid='$commentid'";
     $conn->query($sql);
     $conn->close();
-    return 'Comment removed';
 }
 }
 ?>

@@ -25,7 +25,7 @@ class Controller
     public function addComment($userid, $date, $comment)
     {
         $input = $this->verify->checkCommentInput($comment);
-        if(is_string( $input)){
+        if($input != 10){
             return  $input;
         }
         return $this->db->newComment($userid, $date, $comment);
@@ -40,13 +40,13 @@ class Controller
     {
         return $this->db->removeComment($commentid);
     }
-
-    /* LOGIN CALLS */
+    /* Performs check on the parameters. 
+    @return Either a string withinformation on what went wrong or an object with user information for the session.  */
     public function login($username, $password)
     {
         $this->username = $username;
         $input = $this->verify->checkLoginInput($username, $password);
-        if(is_string($input)){
+        if($input != 10){
             return $input;
         }
         elseif(is_object($this->db->login($username,$password))){
@@ -54,14 +54,15 @@ class Controller
         }
        return $this->db->login($username,$password);
     }
+    //Sets the username to null.
     public function logout(){
         $this->username = NULL;
     }
-    /* SIGNUP CALLS*/
+    /* Register a new user in the database afte some checks are peformed on the inputs.*/
     public function signupUser($username, $email, $pwd, $pwdC)
     {
         $input = $this->verify->checkSignupInput($username, $email, $pwd, $pwdC);
-        if(is_string($input)){
+        if($input != 10){
             return $input;
         }else
             return $this->db->storeUser($username, $email, $pwd, $pwdC);
