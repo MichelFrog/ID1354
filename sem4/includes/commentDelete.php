@@ -5,5 +5,5 @@ include 'dbh.include.php';
 
         $sql = "DELETE FROM comments WHERE commentid='$commentId'";
         $resut = mysqli_query($conn,$sql);
-        $msg = "Success!";
-        echo json_encode($msg);
+        $msg = 'Success!';
+        echo JSON_encode($msg);
